@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ahmed Alshareef's computer science portfolio and selected university projects.">
+  <meta name="theme-color" content="#f5f7f8">
+  <title>Ahmed Alshareef | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ahmed Alshareef, home">AA<span>.</span></a>
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+      <span aria-hidden="true" class="theme-icon">◐</span><span id="theme-label">Use dark theme</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Computer Science · KFUPM</p>
+        <h1 id="hero-title">Hello, I’m Ahmed<span class="accent">.</span></h1>
+        <p class="hero-intro">I’m a computer science student exploring software, computer architecture, and practical ways to solve problems.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/images/images-1.jpg" alt="Generic profile silhouette placeholder">
+        <span class="portrait-note">Always learning<br>and building</span>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">↓</a>
+    </section>
+
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><p class="eyebrow">A little about me</p><h2 id="about-title">Curious by design.</h2></div>
+      <div class="about-copy">
+        <p>I’m a junior computer science student at King Fahd University of Petroleum and Minerals. I’m currently building my foundations in web development and computer networks.</p>
+        <p>I enjoy learning how systems work, from a processor’s datapath to the patterns hidden in sensor data. These projects are snapshots of that learning.</p>
+        <div class="interest-list" aria-label="Areas of interest"><span>Web development</span><span>Computer architecture</span><span>Machine learning</span></div>
+      </div>
+    </section>
+
+    <section class="projects-section section-shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading projects-heading"><div><p class="eyebrow">Selected coursework</p><h2 id="projects-title">Things I’ve built.</h2></div><p class="project-count" id="project-count" aria-live="polite">Showing 2 projects</p></div>
+      <div class="project-tools">
+        <div class="filter-group" role="group" aria-label="Filter projects by topic">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="architecture" aria-pressed="false">Architecture</button>
+          <button class="filter-button" type="button" data-filter="machine-learning" aria-pressed="false">Machine learning</button>
+        </div>
+          <label class="search-box"><span class="visually-hidden">Search projects</span><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Search projects" autocomplete="off" aria-controls="project-grid"></label>
+      </div>
+      <p class="result-message" id="project-status" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="architecture" data-search="16-bit pipelined processor computer architecture logisim evolution datapath control forwarding stall logic coe 301">
+          <div class="project-image"><img src="assets/images/images-2.jpg" alt="Block diagram of a processor datapath and control unit" loading="lazy" decoding="async"><span class="project-number">01</span></div>
+          <div class="project-content"><p class="card-kicker">Computer architecture · COE 301</p><h3>16-bit pipelined processor</h3><p>A Logisim Evolution processor with a datapath, control unit, forwarding, and stall logic. Building it made instruction flow and pipeline hazards easier to reason about.</p><span class="tag">Logisim Evolution</span></div>
+        </article>
+        <article class="project-card" data-category="machine-learning" data-search="room occupancy classifier sensor data knn svm neural network cross validation coe 292">
+          <div class="project-image"><img src="assets/images/images-3.jpg" alt="Heatmap comparing classification model metrics" loading="lazy" decoding="async"><span class="project-number">02</span></div>
+          <div class="project-content"><p class="card-kicker">Machine learning · COE 292</p><h3>Room occupancy classifier</h3><p>A comparison of KNN, SVM, and a neural network for predicting occupancy from sensor data, evaluated with 5-fold cross-validation.</p><span class="tag">Classification</span></div>
+        </article>
+      </div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h3>No matching projects</h3><p>Try another search or choose “All” to see every project.</p><button class="text-button" id="clear-filters" type="button">Clear filters</button></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-shell contact-layout">
+        <div class="section-heading"><p class="eyebrow">Have a question?</p><h2 id="contact-title">Let’s talk.</h2><p class="contact-note">Use the form to try the interactive demo. It validates your details in this browser; it does not send or store a message.</p></div>
+        <form id="contact-form" novalidate>
+          <div class="form-row"><div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="name-error"><p class="field-error" id="name-error"></p></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p class="field-error" id="email-error"></p></div></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" required minlength="10" maxlength="600" aria-describedby="message-hint message-error"></textarea><div class="field-meta"><span id="message-hint">At least 10 characters</span><span id="message-count">0 / 600</span></div><p class="field-error" id="message-error"></p></div>
+          <button class="button button-primary" type="submit">Check my message <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>Designed and built by Ahmed Alshareef</p><a href="#top">Back to top ↑</a><p>© 2026</p></footer>
+</body>
+</html>
